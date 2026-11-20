@@ -1,15 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Token Radar: pre-token protocols ranked by implied value</title>
-<link rel="stylesheet" href="app.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file:; base-uri 'none'; form-action 'none'">
+  <title>Signal Atlas · Token launch radar</title>
+  <link rel="stylesheet" href="app.css">
 </head>
 <body>
-<a class="skip" href="#board">Skip to the board</a>
-<main id="board" tabindex="-1" aria-busy="true"></main>
-<script src="../data.js"></script>
-<script src="app.js"></script>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap mast-inner">
+      <a class="brand" href="#board" aria-label="Signal Atlas home">
+        <svg viewBox="0 0 36 36" width="35" height="35" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="13.5" stroke="currentColor" opacity=".4"/>
+          <circle cx="18" cy="18" r="7.5" stroke="currentColor" opacity=".7"/>
+          <path d="M18 2.5v7m0 17v7M2.5 18h7m17 0h7M18 18l10-10" stroke="currentColor"/>
+          <circle cx="18" cy="18" r="2.6" fill="currentColor"/>
+        </svg>
+        <span>SIGNAL<span class="brand-second"> ATLAS</span></span>
+      </a>
+      <nav aria-label="Views">
+        <a href="#board" data-view="board">Rankings</a>
+        <a href="#recorded" data-view="recorded">Recorded tokens</a>
+        <a href="#method" data-view="method">Methodology</a>
+      </nav>
+      <div class="snapshot"><span class="lamp"></span><span id="snapshot-date"></span></div>
+    </div>
+  </header>
+  <main id="content" class="wrap" tabindex="-1">
+    <noscript>This dashboard needs JavaScript to read its local snapshot.</noscript>
+    <p id="loading">Loading the local snapshot…</p>
+  </main>
+  <footer class="wrap footer"><span>SIGNAL ATLAS</span><span>DefiLlama frozen snapshot · All values in USD</span></footer>
+  <script src="../data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
